@@ -4,16 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class UsersController extends Controller
+class UserController extends Controller
 {
     //
-    public function create()
-    {
-        return view('users.create');
-    }
-
     public function show(User $user)
     {
+        var_dump(compact('user'));
         return view('users.show', compact('user'));
     }
 }
